@@ -1,0 +1,90 @@
+//theme utilities
+
+// Bootstrap utilities
+@import "~bootstrap/scss/utilities";
+
+//$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+//Modify utilities
+$utilities: map-merge($utilities,
+    ("font-family": map-merge(map-get($utilities, "font-family"),
+            (values: map-merge(map-get(map-get($utilities, "font-family"), "values"),
+                    (poppins: $font-family-poppins,
+                        inter: $font-family-inter,
+                    ),
+                ),
+            ),
+        ),
+        "font-size": map-merge(map-get($utilities, "font-size"),
+            (values: map-merge(map-get(map-get($utilities, "font-size"), "values"),
+                    (xxs: $fs-xxs,
+                        xs: $fs-xs,
+                        sm: $fs-sm,
+                        md: $fs-md,
+                        lg: $fs-lg,
+                        xl: $fs-xl,
+                        xxl: $fs-xxl,
+                    ),
+                ),
+            ),
+        ),
+        "max-width": map-merge(map-get($utilities, "max-width"),
+            (values: map-merge(map-get(map-get($utilities, "max-width"), "values"),
+                    (25: 25%,
+                        50: 50%,
+                        75: 75%,
+                        xs: 65px,
+                        sm:420px,
+                        l: 990px, ),
+                )),
+        ),
+        "viewport-height": map-merge(map-get($utilities, "viewport-height"),
+            (values: map-merge(map-get(map-get($utilities, "viewport-height"), "values"),
+                    (25: 25vh,
+                        50: 50vh,
+                        75: 75vh),
+                )),
+        ),
+
+        "bg-opacity": map-merge(map-get($utilities, "bg-opacity"),
+            (values: map-merge(map-get(map-get($utilities, "bg-opacity"), "values"),
+                    (15: .15,
+                    ),
+                )),
+        ),
+    ));
+
+//Add and Override utilities
+$utilities: map-merge($utilities,
+    ( //Added
+        "object-position": (property: object-position,
+            class: op,
+            values: top center bottom,
+        ),
+        //Overrided
+        /* "overflow": (
+            responsive: true,
+            property: overflow,
+            values: visible hidden scroll auto,
+        ),*/
+        "opacity": (property: opacity,
+            values: (0: 0,
+                25: .25,
+                50: .5,
+                60: .6,
+                70: .7,
+                75: .75,
+                100: 1,
+            )),
+        "rounded": (property: border-radius,
+            class: rounded,
+            values: (null: var(--#{$prefix}border-radius),
+                0: 0,
+                1: var(--#{$prefix}border-radius-sm),
+                2: var(--#{$prefix}border-radius),
+                3: var(--#{$prefix}border-radius-lg),
+                4: var(--#{$prefix}border-radius-xl),
+                5: 20px,
+                circle: 50%,
+                pill: var(--#{$prefix}border-radius-pill))),
+    ));

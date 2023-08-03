@@ -1,0 +1,77 @@
+// Default variable overrides
+
+$primary: #032868;
+$light: #f0f6ff;
+$dark: #181C32;
+$danger:#BF0A30;
+$secondary:#A3A3A3;
+$yellow:#feb61c;
+$light-grey:#B8B8B8;
+$light2:#F2F2F2;
+
+// Bootstrap and its default variables
+@import "~bootstrap/scss/variables";
+$accordion-icon-width:rem(13);
+$accordion-icon-transform: rotate(-90deg);
+$accordion-button-bg:transparent;
+$accordion-button-active-bg:transparent;
+
+$navbar-light-color:$black;
+$navbar-light-hover-color:$danger;
+
+// ratios
+$aspect-ratios: ("1x1": 100%,
+    "2x3": calc(3 / 2 * 100%),
+    "1x2": calc(2 / 1 * 100%),
+    "4x3": calc(3 / 4 * 100%),
+    "14x15": calc(15 / 14 * 100%),
+    "16x9": calc(9 / 16 * 100%),
+    "21x9": calc(9 / 21 * 100%),
+    "23x10": calc(10 / 23 * 100%),
+    "38x41": calc(41 / 38 * 100%));
+
+// font-family
+$font-family-poppins: 'Poppins',
+sans-serif;
+$font-family-inter: 'Inter',
+sans-serif;
+// font weight
+$font-weight-Black:900;
+
+// font sizes
+$fs-xs: rem(12);
+$fs-xxs: rem(8);
+$fs-sm: rem(14);
+$fs-md: rem(15);
+$fs-base: rem(16);
+$fs-lg: rem(18);
+$fs-xl: rem(22);
+$fs-xxl: rem(23);
+
+// headings
+$h1-font-size: rem(40);
+$h2-font-size: rem(34);
+
+// override variable
+$enable-smooth-scroll:false;
+$enable-negative-margins: true;
+
+//body
+$body-bg: $white;
+$body-color: $dark;
+
+// link
+$link-color: $blue !default;
+
+// nav
+$nav-link-padding-y: 0.375rem;
+$nav-link-padding-x: 0;
+$nav-link-color: rgba(var(--#{$prefix}dark-rgb), 0.75);
+$nav-link-hover-color: rgba(var(--#{$prefix}dark-rgb), 1);
+$nav-link-font-size: $fs-md;
+$nav-link-font-weight: $font-weight-medium;
+$nav-underline-gap: 2.25rem;
+$nav-underline-link-active-color: rgba(var(--#{$prefix}dark-rgb), 0.75);
+
+$navbar-toggler-focus-width:0;
+$navbar-light-active-color:$danger;
